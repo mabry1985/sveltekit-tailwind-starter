@@ -1,7 +1,6 @@
 const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}', './src/**/*.css'],
-	// darkMode: 'class',
+	content: ['./src/**/*.{html,js,svelte,ts}', './src/**/*.css'],
 	theme: {
     fontFamily: {
       'heading': ['Titillium Web', 'sans-serif'],
@@ -18,8 +17,6 @@ const config = {
         'oddball-white': '#FAF9F6',
 			},
 		},
-	},
-	variants: {
 	},
 	plugins: [],
 };
