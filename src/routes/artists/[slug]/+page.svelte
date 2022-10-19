@@ -3,8 +3,8 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
-
 <h3>{data.firstName}</h3>
+<p>{data.bio}</p>
 <img src={data.profileImage.sizes.main.url} alt={data.profileImage.alt}/>
 
 <style>

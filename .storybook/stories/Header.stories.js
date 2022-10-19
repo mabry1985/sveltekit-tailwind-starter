@@ -1,4 +1,4 @@
-import Header from './Header.svelte';
+import Header from '../../src/lib/Header.svelte';
 
 export default {
   title: 'Example/Header',

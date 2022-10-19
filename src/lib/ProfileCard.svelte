@@ -11,17 +11,17 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class='profile-card-wrapper' on:click={goToArtistPage}>
+<div class='profile-card-wrapper max-w-[20rem] lg:max-w-[22.5rem]' on:click={goToArtistPage}>
   <div class='inner-wrapper'>
-    <h3 class='artist-name'>{name}</h3>
-    <img class='profile-img' src={image} alt={'Profile Image of ' + name} />
-    <a class="link" href={'/artists/' + (name).toLowerCase()} bind:this={linkEl}>Portfolio</a>
+    <h3 class='artist-name text-xl lg:text-2xl'>{name}</h3>
+    <img class='profile-img max-w-[12.5rem] lg:max-w-[15.5rem]' src={image} alt={'Profile Image of ' + name} />
+    <a class="link text-sm lg:text-base" href={'/artists/' + (name).toLowerCase()} bind:this={linkEl} alt={'portfolio page of ' + name}>Portfolio</a>
   </div>
-</div>
+</div>    
 
 <style>
   .profile-img {
-    @apply max-w-[15.5rem] rounded-full transition-all duration-300 border-[3px] border-oddball-white border-solid mx-4;
+    @apply rounded-full transition-all duration-300 border-[3px] border-oddball-white border-solid mx-4;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
@@ -47,7 +47,7 @@
   }
 
   .profile-card-wrapper h3 {
-    @apply text-2xl flex flex-col uppercase font-bold text-oddball-white font-heading mb-7;
+    @apply flex flex-col uppercase font-bold text-oddball-white font-heading mb-7;
   }
   
   h3::after {
@@ -56,7 +56,7 @@
   }
 
   .link {
-    @apply text-oddball-white text-base font-body no-underline mb-2 mt-6 uppercase block relative;
+    @apply text-oddball-white font-body no-underline mb-2 mt-6 uppercase block relative;
   }
 
   .link::after {

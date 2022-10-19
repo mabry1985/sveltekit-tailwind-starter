@@ -5,18 +5,12 @@
 	export let data;  
 </script>
 
-<section>
-	<ul class="flex flex-row flex-wrap justify-around max-w-screen-xl">
+<section class="gallery-container" >
+	<ul class="gallery flex flex-wrap justify-center gap-6">
 		{#each data.docs as artist }
-		<li>
+		<li class="">
 			<ProfileCard name={artist.firstName} image={artist.profileImage.sizes.main.url} />
 		</li>
 		{/each}
 	</ul>
 </section>
-
-<style>
-	ul {
-		@apply flex flex-row flex-wrap justify-around max-w-screen-xl mx-auto;
-	}
-</style>
