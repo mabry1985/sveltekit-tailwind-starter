@@ -2,21 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 body {
   @apply bg-oddball-black text-oddball-white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold font-heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold font-heading uppercase;
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-5xl;
 }
 
 p {
   @apply font-normal font-body;
+}
+
+.container {
+  @apply mx-auto max-w-screen-2xl;
+}
+
+.full-bleed {
+  @apply mx-0 w-full;
 }

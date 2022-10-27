@@ -30,14 +30,23 @@
 {:else if failed}
 	<img src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
 {:else if loading}
-	<img src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="Loading..." />
+	<div class={imgTypeClass + '-placeholder'} ></div>
 {/if}
 
 
 <style>
   .sveltio-image--profile {
-    @apply max-w-xs rounded-full;
+    @apply max-w-[15.5rem] rounded-full;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
+
+	.sveltio-image--profile-placeholder {
+		@apply w-[15.5rem] h-[15.5rem] rounded-full bg-gray-200;
+	}
+
+	.sveltio-image--profile:hover {
+		-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(0%);
+	}
 </style>
