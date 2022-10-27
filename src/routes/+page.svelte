@@ -2,7 +2,7 @@
 	import Header from '$lib/Header.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
-  console.log(data);
+  import '../iframeResizer.contentWindow.min.js'
 </script>
 
 <section class="main-hero" style="background-image: url({data.url})">

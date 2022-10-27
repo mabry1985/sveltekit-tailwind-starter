@@ -360,7 +360,7 @@ var require_cookie = __commonJS({
 
 // node_modules/set-cookie-parser/lib/set-cookie.js
 var require_set_cookie = __commonJS({
-  "node_modules/set-cookie-parser/lib/set-cookie.js"(exports, module) {
+  "node_modules/set-cookie-parser/lib/set-cookie.js"(exports, module2) {
     "use strict";
     var defaultParseOptions = {
       decodeValues: true,
@@ -515,10 +515,10 @@ var require_set_cookie = __commonJS({
       }
       return cookiesStrings;
     }
-    module.exports = parse3;
-    module.exports.parse = parse3;
-    module.exports.parseString = parseString2;
-    module.exports.splitCookiesString = splitCookiesString2;
+    module2.exports = parse3;
+    module2.exports.parse = parse3;
+    module2.exports.parseString = parseString2;
+    module2.exports.splitCookiesString = splitCookiesString2;
   }
 });
 
@@ -574,7 +574,7 @@ var init__ = __esm({
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
     file = "_app/immutable/components/pages/_layout.svelte-e2918034.js";
     imports = ["_app/immutable/components/pages/_layout.svelte-e2918034.js", "_app/immutable/chunks/index-0d9e0bfe.js"];
-    stylesheets = ["_app/immutable/assets/_layout-1efd4b2e.css", "_app/immutable/assets/Header-4b14aedf.css"];
+    stylesheets = ["_app/immutable/assets/_layout-84e0300c.css", "_app/immutable/assets/Header-4b14aedf.css"];
   }
 });
 
@@ -659,8 +659,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/components/error.svelte-4c5e64d8.js";
-    imports2 = ["_app/immutable/components/error.svelte-4c5e64d8.js", "_app/immutable/chunks/index-0d9e0bfe.js", "_app/immutable/chunks/singletons-753af38f.js"];
+    file2 = "_app/immutable/components/error.svelte-90eafb57.js";
+    imports2 = ["_app/immutable/components/error.svelte-90eafb57.js", "_app/immutable/chunks/index-0d9e0bfe.js", "_app/immutable/chunks/singletons-e2396b70.js"];
     stylesheets2 = [];
   }
 });
@@ -695,13 +695,333 @@ var css2, Page;
 var init_page_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_page.svelte.js"() {
     init_chunks();
+    !function(c) {
+      if ("undefined" != typeof window) {
+        var i = true, o = 10, r = "", a = 0, u = "", s2 = null, d = "", l = false, f = { resize: 1, click: 1 }, m = 128, h = true, g = 1, n = "bodyOffset", p = n, v = true, y = "", w = {}, b = 32, T = null, E = false, O = false, S = "[iFrameSizer]", M = S.length, I = "", N = { max: 1, min: 1, bodyScroll: 1, documentElementScroll: 1 }, A = "child", C = true, z = window.parent, k = "*", R = 0, x = false, e = null, L = 16, F = 1, t = "scroll", P = t, D = window, j = function() {
+          re("onMessage function not defined");
+        }, q = function() {
+        }, H = function() {
+        }, W = { height: function() {
+          return re("Custom height calculation function not defined"), document.documentElement.offsetHeight;
+        }, width: function() {
+          return re("Custom width calculation function not defined"), document.body.scrollWidth;
+        } }, B = {}, J = false;
+        try {
+          var U = Object.create({}, { passive: { get: function() {
+            J = true;
+          } } });
+          window.addEventListener("test", ee, U), window.removeEventListener("test", ee, U);
+        } catch (e2) {
+        }
+        var V, X, Y, K, Q, G, Z = { bodyOffset: function() {
+          return document.body.offsetHeight + pe("marginTop") + pe("marginBottom");
+        }, offset: function() {
+          return Z.bodyOffset();
+        }, bodyScroll: function() {
+          return document.body.scrollHeight;
+        }, custom: function() {
+          return W.height();
+        }, documentElementOffset: function() {
+          return document.documentElement.offsetHeight;
+        }, documentElementScroll: function() {
+          return document.documentElement.scrollHeight;
+        }, max: function() {
+          return Math.max.apply(null, ye(Z));
+        }, min: function() {
+          return Math.min.apply(null, ye(Z));
+        }, grow: function() {
+          return Z.max();
+        }, lowestElement: function() {
+          return Math.max(Z.bodyOffset() || Z.documentElementOffset(), ve("bottom", be()));
+        }, taggedElement: function() {
+          return we("bottom", "data-iframe-height");
+        } }, $ = { bodyScroll: function() {
+          return document.body.scrollWidth;
+        }, bodyOffset: function() {
+          return document.body.offsetWidth;
+        }, custom: function() {
+          return W.width();
+        }, documentElementScroll: function() {
+          return document.documentElement.scrollWidth;
+        }, documentElementOffset: function() {
+          return document.documentElement.offsetWidth;
+        }, scroll: function() {
+          return Math.max($.bodyScroll(), $.documentElementScroll());
+        }, max: function() {
+          return Math.max.apply(null, ye($));
+        }, min: function() {
+          return Math.min.apply(null, ye($));
+        }, rightMostElement: function() {
+          return ve("right", be());
+        }, taggedElement: function() {
+          return we("right", "data-iframe-width");
+        } }, _ = (V = Te, Q = null, G = 0, function() {
+          var e2 = Date.now(), t2 = L - (e2 - (G = G || e2));
+          return X = this, Y = arguments, t2 <= 0 || L < t2 ? (Q && (clearTimeout(Q), Q = null), G = e2, K = V.apply(X, Y), Q || (X = Y = null)) : Q = Q || setTimeout(Ee, t2), K;
+        });
+        te(window, "message", function(t2) {
+          var n2 = { init: function() {
+            y = t2.data, z = t2.source, ae(), h = false, setTimeout(function() {
+              v = false;
+            }, m);
+          }, reset: function() {
+            v ? ie("Page reset ignored by init") : (ie("Page size reset by host page"), Me("resetPage"));
+          }, resize: function() {
+            Oe("resizeParent", "Parent window requested size check");
+          }, moveToAnchor: function() {
+            w.findTarget(i2());
+          }, inPageLink: function() {
+            this.moveToAnchor();
+          }, pageInfo: function() {
+            var e3 = i2();
+            ie("PageInfoFromParent called from parent: " + e3), H(JSON.parse(e3)), ie(" --");
+          }, message: function() {
+            var e3 = i2();
+            ie("onMessage called from parent: " + e3), j(JSON.parse(e3)), ie(" --");
+          } };
+          function o2() {
+            return t2.data.split("]")[1].split(":")[0];
+          }
+          function i2() {
+            return t2.data.substr(t2.data.indexOf(":") + 1);
+          }
+          function r2() {
+            return t2.data.split(":")[2] in { true: 1, false: 1 };
+          }
+          function e2() {
+            var e3 = o2();
+            e3 in n2 ? n2[e3]() : ("undefined" == typeof module || !module.exports) && "iFrameResize" in window || "jQuery" in window && "iFrameResize" in window.jQuery.prototype || r2() || re("Unexpected message (" + t2.data + ")");
+          }
+          S === ("" + t2.data).substr(0, M) && (false === h ? e2() : r2() ? n2.init() : ie('Ignored message of type "' + o2() + '". Received before initialization.'));
+        }), te(window, "readystatechange", Ae), Ae();
+      }
+      function ee() {
+      }
+      function te(e2, t2, n2, o2) {
+        e2.addEventListener(t2, n2, !!J && (o2 || {}));
+      }
+      function ne(e2) {
+        return e2.charAt(0).toUpperCase() + e2.slice(1);
+      }
+      function oe(e2) {
+        return S + "[" + I + "] " + e2;
+      }
+      function ie(e2) {
+        E && "object" == typeof window.console && console.log(oe(e2));
+      }
+      function re(e2) {
+        "object" == typeof window.console && console.warn(oe(e2));
+      }
+      function ae() {
+        function e2(e3) {
+          return "true" === e3;
+        }
+        var t2;
+        function n2(e3) {
+          Ne(0, 0, e3.type, e3.screenY + ":" + e3.screenX);
+        }
+        function o2(e3, t3) {
+          ie("Add event listener: " + t3), te(window.document, e3, n2);
+        }
+        t2 = y.substr(M).split(":"), I = t2[0], a = c !== t2[1] ? Number(t2[1]) : a, l = c !== t2[2] ? e2(t2[2]) : l, E = c !== t2[3] ? e2(t2[3]) : E, b = c !== t2[4] ? Number(t2[4]) : b, i = c !== t2[6] ? e2(t2[6]) : i, u = t2[7], p = c !== t2[8] ? t2[8] : p, r = t2[9], d = t2[10], R = c !== t2[11] ? Number(t2[11]) : R, w.enable = c !== t2[12] && e2(t2[12]), A = c !== t2[13] ? t2[13] : A, P = c !== t2[14] ? t2[14] : P, O = c !== t2[15] ? Boolean(t2[15]) : O, ie("Initialising iFrame (" + window.location.href + ")"), function() {
+          function e3(e4, t3) {
+            return "function" == typeof e4 && (ie("Setup custom " + t3 + "CalcMethod"), W[t3] = e4, e4 = "custom"), e4;
+          }
+          "iFrameResizer" in window && Object === window.iFrameResizer.constructor && (function() {
+            var e4 = window.iFrameResizer;
+            ie("Reading data from page: " + JSON.stringify(e4)), Object.keys(e4).forEach(ue, e4), j = "onMessage" in e4 ? e4.onMessage : j, q = "onReady" in e4 ? e4.onReady : q, k = "targetOrigin" in e4 ? e4.targetOrigin : k, p = "heightCalculationMethod" in e4 ? e4.heightCalculationMethod : p, P = "widthCalculationMethod" in e4 ? e4.widthCalculationMethod : P;
+          }(), p = e3(p, "height"), P = e3(P, "width"));
+          ie("TargetOrigin for parent set to: " + k);
+        }(), function() {
+          c === u && (u = a + "px");
+          ce("margin", function(e3, t3) {
+            -1 !== t3.indexOf("-") && (re("Negative CSS value ignored for " + e3), t3 = "");
+            return t3;
+          }("margin", u));
+        }(), ce("background", r), ce("padding", d), (t2 = document.createElement("div")).style.clear = "both", t2.style.display = "block", t2.style.height = "0", document.body.appendChild(t2), fe(), me(), document.documentElement.style.height = "", document.body.style.height = "", ie('HTML & body height set to "auto"'), ie("Enable public methods"), D.parentIFrame = { autoResize: function(e3) {
+          return true === e3 && false === i ? (i = true, he()) : false === e3 && true === i && (i = false, de("remove"), null !== s2 && s2.disconnect(), clearInterval(T)), Ne(0, 0, "autoResize", JSON.stringify(i)), i;
+        }, close: function() {
+          Ne(0, 0, "close");
+        }, getId: function() {
+          return I;
+        }, getPageInfo: function(e3) {
+          "function" == typeof e3 ? (H = e3, Ne(0, 0, "pageInfo")) : (H = function() {
+          }, Ne(0, 0, "pageInfoStop"));
+        }, moveToAnchor: function(e3) {
+          w.findTarget(e3);
+        }, reset: function() {
+          Ie("parentIFrame.reset");
+        }, scrollTo: function(e3, t3) {
+          Ne(t3, e3, "scrollTo");
+        }, scrollToOffset: function(e3, t3) {
+          Ne(t3, e3, "scrollToOffset");
+        }, sendMessage: function(e3, t3) {
+          Ne(0, 0, "message", JSON.stringify(e3), t3);
+        }, setHeightCalculationMethod: function(e3) {
+          p = e3, fe();
+        }, setWidthCalculationMethod: function(e3) {
+          P = e3, me();
+        }, setTargetOrigin: function(e3) {
+          ie("Set targetOrigin: " + e3), k = e3;
+        }, size: function(e3, t3) {
+          Oe("size", "parentIFrame.size(" + ((e3 || "") + (t3 ? "," + t3 : "")) + ")", e3, t3);
+        } }, true === O && (o2("mouseenter", "Mouse Enter"), o2("mouseleave", "Mouse Leave")), he(), w = function() {
+          function i2(e4) {
+            var t4 = e4.getBoundingClientRect(), e4 = { x: window.pageXOffset !== c ? window.pageXOffset : document.documentElement.scrollLeft, y: window.pageYOffset !== c ? window.pageYOffset : document.documentElement.scrollTop };
+            return { x: parseInt(t4.left, 10) + parseInt(e4.x, 10), y: parseInt(t4.top, 10) + parseInt(e4.y, 10) };
+          }
+          function n3(e4) {
+            var t4, n4 = e4.split("#")[1] || e4, e4 = decodeURIComponent(n4), o4 = document.getElementById(e4) || document.getElementsByName(e4)[0];
+            c !== o4 ? (t4 = i2(t4 = o4), ie("Moving to in page link (#" + n4 + ") at x: " + t4.x + " y: " + t4.y), Ne(t4.y, t4.x, "scrollToOffset")) : (ie("In page link (#" + n4 + ") not found in iFrame, so sending to parent"), Ne(0, 0, "inPageLink", "#" + n4));
+          }
+          function e3() {
+            var e4 = window.location.hash, t4 = window.location.href;
+            "" !== e4 && "#" !== e4 && n3(t4);
+          }
+          function t3() {
+            Array.prototype.forEach.call(document.querySelectorAll('a[href^="#"]'), function(e4) {
+              "#" !== e4.getAttribute("href") && te(e4, "click", function(e5) {
+                e5.preventDefault(), n3(this.getAttribute("href"));
+              });
+            });
+          }
+          function o3() {
+            Array.prototype.forEach && document.querySelectorAll ? (ie("Setting up location.hash handlers"), t3(), te(window, "hashchange", e3), setTimeout(e3, m)) : re("In page linking not fully supported in this browser! (See README.md for IE8 workaround)");
+          }
+          w.enable ? o3() : ie("In page linking not enabled");
+          return { findTarget: n3 };
+        }(), Oe("init", "Init message from host page"), q();
+      }
+      function ue(e2) {
+        var t2 = e2.split("Callback");
+        2 === t2.length && (this[t2 = "on" + t2[0].charAt(0).toUpperCase() + t2[0].slice(1)] = this[e2], delete this[e2], re("Deprecated: '" + e2 + "' has been renamed '" + t2 + "'. The old method will be removed in the next major version."));
+      }
+      function ce(e2, t2) {
+        c !== t2 && "" !== t2 && "null" !== t2 && ie("Body " + e2 + ' set to "' + (document.body.style[e2] = t2) + '"');
+      }
+      function se(n2) {
+        var e2 = { add: function(e3) {
+          function t2() {
+            Oe(n2.eventName, n2.eventType);
+          }
+          B[e3] = t2, te(window, e3, t2, { passive: true });
+        }, remove: function(e3) {
+          var t2, n3 = B[e3];
+          delete B[e3], t2 = window, e3 = e3, n3 = n3, t2.removeEventListener(e3, n3, false);
+        } };
+        n2.eventNames && Array.prototype.map ? (n2.eventName = n2.eventNames[0], n2.eventNames.map(e2[n2.method])) : e2[n2.method](n2.eventName), ie(ne(n2.method) + " event listener: " + n2.eventType);
+      }
+      function de(e2) {
+        se({ method: e2, eventType: "Animation Start", eventNames: ["animationstart", "webkitAnimationStart"] }), se({ method: e2, eventType: "Animation Iteration", eventNames: ["animationiteration", "webkitAnimationIteration"] }), se({ method: e2, eventType: "Animation End", eventNames: ["animationend", "webkitAnimationEnd"] }), se({ method: e2, eventType: "Input", eventName: "input" }), se({ method: e2, eventType: "Mouse Up", eventName: "mouseup" }), se({ method: e2, eventType: "Mouse Down", eventName: "mousedown" }), se({ method: e2, eventType: "Orientation Change", eventName: "orientationchange" }), se({ method: e2, eventType: "Print", eventName: ["afterprint", "beforeprint"] }), se({ method: e2, eventType: "Ready State Change", eventName: "readystatechange" }), se({ method: e2, eventType: "Touch Start", eventName: "touchstart" }), se({ method: e2, eventType: "Touch End", eventName: "touchend" }), se({ method: e2, eventType: "Touch Cancel", eventName: "touchcancel" }), se({ method: e2, eventType: "Transition Start", eventNames: ["transitionstart", "webkitTransitionStart", "MSTransitionStart", "oTransitionStart", "otransitionstart"] }), se({ method: e2, eventType: "Transition Iteration", eventNames: ["transitioniteration", "webkitTransitionIteration", "MSTransitionIteration", "oTransitionIteration", "otransitioniteration"] }), se({ method: e2, eventType: "Transition End", eventNames: ["transitionend", "webkitTransitionEnd", "MSTransitionEnd", "oTransitionEnd", "otransitionend"] }), "child" === A && se({ method: e2, eventType: "IFrame Resized", eventName: "resize" });
+      }
+      function le(e2, t2, n2, o2) {
+        return t2 !== e2 && (e2 in n2 || (re(e2 + " is not a valid option for " + o2 + "CalculationMethod."), e2 = t2), ie(o2 + ' calculation method set to "' + e2 + '"')), e2;
+      }
+      function fe() {
+        p = le(p, n, Z, "height");
+      }
+      function me() {
+        P = le(P, t, $, "width");
+      }
+      function he() {
+        var e2;
+        true === i ? (de("add"), e2 = b < 0, window.MutationObserver || window.WebKitMutationObserver ? e2 ? ge() : s2 = function() {
+          function t2(e3) {
+            function t3(e4) {
+              false === e4.complete && (ie("Attach listeners to " + e4.src), e4.addEventListener("load", i2, false), e4.addEventListener("error", r2, false), u2.push(e4));
+            }
+            "attributes" === e3.type && "src" === e3.attributeName ? t3(e3.target) : "childList" === e3.type && Array.prototype.forEach.call(e3.target.querySelectorAll("img"), t3);
+          }
+          function o2(e3) {
+            ie("Remove listeners from " + e3.src), e3.removeEventListener("load", i2, false), e3.removeEventListener("error", r2, false), e3 = e3, u2.splice(u2.indexOf(e3), 1);
+          }
+          function n2(e3, t3, n3) {
+            o2(e3.target), Oe(t3, n3 + ": " + e3.target.src);
+          }
+          function i2(e3) {
+            n2(e3, "imageLoad", "Image loaded");
+          }
+          function r2(e3) {
+            n2(e3, "imageLoadFailed", "Image load failed");
+          }
+          function a2(e3) {
+            Oe("mutationObserver", "mutationObserver: " + e3[0].target + " " + e3[0].type), e3.forEach(t2);
+          }
+          var u2 = [], c2 = window.MutationObserver || window.WebKitMutationObserver, s22 = function() {
+            var e3 = document.querySelector("body");
+            return s22 = new c2(a2), ie("Create body MutationObserver"), s22.observe(e3, { attributes: true, attributeOldValue: false, characterData: true, characterDataOldValue: false, childList: true, subtree: true }), s22;
+          }();
+          return { disconnect: function() {
+            "disconnect" in s22 && (ie("Disconnect body MutationObserver"), s22.disconnect(), u2.forEach(o2));
+          } };
+        }() : (ie("MutationObserver not supported in this browser!"), ge())) : ie("Auto Resize disabled");
+      }
+      function ge() {
+        0 !== b && (ie("setInterval: " + b + "ms"), T = setInterval(function() {
+          Oe("interval", "setInterval: " + b);
+        }, Math.abs(b)));
+      }
+      function pe(e2, t2) {
+        var n2 = 0;
+        return t2 = t2 || document.body, n2 = null !== (n2 = document.defaultView.getComputedStyle(t2, null)) ? n2[e2] : 0, parseInt(n2, o);
+      }
+      function ve(e2, t2) {
+        for (var n2, o2 = t2.length, i2 = 0, r2 = ne(e2), a2 = Date.now(), u2 = 0; u2 < o2; u2++)
+          i2 < (n2 = t2[u2].getBoundingClientRect()[e2] + pe("margin" + r2, t2[u2])) && (i2 = n2);
+        return a2 = Date.now() - a2, ie("Parsed " + o2 + " HTML elements"), ie("Element position calculated in " + a2 + "ms"), L / 2 < (a2 = a2) && ie("Event throttle increased to " + (L = 2 * a2) + "ms"), i2;
+      }
+      function ye(e2) {
+        return [e2.bodyOffset(), e2.bodyScroll(), e2.documentElementOffset(), e2.documentElementScroll()];
+      }
+      function we(e2, t2) {
+        var n2 = document.querySelectorAll("[" + t2 + "]");
+        return 0 === n2.length && (re("No tagged elements (" + t2 + ") found on page"), document.querySelectorAll("body *")), ve(e2, n2);
+      }
+      function be() {
+        return document.querySelectorAll("body *");
+      }
+      function Te(e2, t2, n2, o2) {
+        function i2() {
+          e2 in { init: 1, interval: 1, size: 1 } || !(p in N || l && P in N) ? e2 in { interval: 1 } || ie("No change in size detected") : Ie(t2);
+        }
+        var r2, a2;
+        function u2(e3, t3) {
+          return !(Math.abs(e3 - t3) <= R);
+        }
+        r2 = c !== n2 ? n2 : Z[p](), a2 = c !== o2 ? o2 : $[P](), u2(g, r2) || l && u2(F, a2) || "init" === e2 ? (Se(), Ne(g = r2, F = a2, e2)) : i2();
+      }
+      function Ee() {
+        G = Date.now(), Q = null, K = V.apply(X, Y), Q || (X = Y = null);
+      }
+      function Oe(e2, t2, n2, o2) {
+        x && e2 in f ? ie("Trigger event cancelled: " + e2) : (e2 in { reset: 1, resetPage: 1, init: 1 } || ie("Trigger event: " + t2), ("init" === e2 ? Te : _)(e2, t2, n2, o2));
+      }
+      function Se() {
+        x || (x = true, ie("Trigger event lock on")), clearTimeout(e), e = setTimeout(function() {
+          x = false, ie("Trigger event lock off"), ie("--");
+        }, m);
+      }
+      function Me(e2) {
+        g = Z[p](), F = $[P](), Ne(g, F, e2);
+      }
+      function Ie(e2) {
+        var t2 = p;
+        p = n, ie("Reset trigger event: " + e2), Se(), Me("reset"), p = t2;
+      }
+      function Ne(e2, t2, n2, o2, i2) {
+        var r2;
+        true === C && (c === i2 ? i2 = k : ie("Message targetOrigin: " + i2), ie("Sending message to host page (" + (r2 = I + ":" + (e2 + ":" + t2) + ":" + n2 + (c !== o2 ? ":" + o2 : "")) + ")"), z.postMessage(S + r2, i2));
+      }
+      function Ae() {
+        "loading" !== document.readyState && window.parent.postMessage("[iFrameResizerChild]Ready", "*");
+      }
+    }();
     css2 = {
       code: ".main-hero.svelte-11yviz6{@apply flex flex-col;;background-size:cover;background-position:center;background-repeat:no-repeat;height:calc(100vh - 8rem);width:100%;display:flex;justify-content:center;align-items:center}.desc.svelte-11yviz6{@apply text-lg;}.hero-content.svelte-11yviz6{@apply text-center;}",
       map: null
     };
     Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { data } = $$props;
-      console.log(data);
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
       $$result.css.add(css2);
@@ -728,8 +1048,8 @@ var init__3 = __esm({
     init_page_server_ts();
     index3 = 2;
     component3 = async () => (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    file3 = "_app/immutable/components/pages/_page.svelte-9d2b4197.js";
-    imports3 = ["_app/immutable/components/pages/_page.svelte-9d2b4197.js", "_app/immutable/chunks/index-0d9e0bfe.js"];
+    file3 = "_app/immutable/components/pages/_page.svelte-91e7695a.js";
+    imports3 = ["_app/immutable/components/pages/_page.svelte-91e7695a.js", "_app/immutable/chunks/index-0d9e0bfe.js"];
     stylesheets3 = ["_app/immutable/assets/_page-bbada73b.css", "_app/immutable/assets/Header-4b14aedf.css"];
   }
 });
@@ -3543,14 +3863,14 @@ var Server = class {
     const pub = Object.fromEntries(entries.filter(([k]) => k.startsWith("PUBLIC_")));
     this.options.public_env = pub;
     if (!this.options.hooks) {
-      const module = await Promise.resolve().then(() => (init_hooks(), hooks_exports));
-      if (module.externalFetch) {
+      const module2 = await Promise.resolve().then(() => (init_hooks(), hooks_exports));
+      if (module2.externalFetch) {
         throw new Error("externalFetch has been removed \u2014 use handleFetch instead. See https://github.com/sveltejs/kit/pull/6565 for details");
       }
       this.options.hooks = {
-        handle: module.handle || (({ event, resolve }) => resolve(event)),
-        handleError: module.handleError || (({ error: error2 }) => console.error(error2.stack)),
-        handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request))
+        handle: module2.handle || (({ event, resolve }) => resolve(event)),
+        handleError: module2.handleError || (({ error: error2 }) => console.error(error2.stack)),
+        handleFetch: module2.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request))
       };
     }
   }
@@ -3569,7 +3889,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   mimeTypes: { ".png": "image/png" },
   _: {
-    entry: { "file": "_app/immutable/start-3414b197.js", "imports": ["_app/immutable/start-3414b197.js", "_app/immutable/chunks/index-0d9e0bfe.js", "_app/immutable/chunks/singletons-753af38f.js"], "stylesheets": [] },
+    entry: { "file": "_app/immutable/start-767516aa.js", "imports": ["_app/immutable/start-767516aa.js", "_app/immutable/chunks/index-0d9e0bfe.js", "_app/immutable/chunks/singletons-e2396b70.js"], "stylesheets": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
@@ -3640,4 +3960,11 @@ export {
  * Copyright(c) 2015 Douglas Christopher Wilson
  * MIT Licensed
  */
+/*! iFrame Resizer (iframeSizer.contentWindow.min.js) - v4.3.2 - 2021-04-26
+*  Desc: Include this file in any page being loaded into an iframe
+*        to force the iframe to resize to the content size.
+*  Requires: iframeResizer.min.js on host page.
+*  Copyright: (c) 2021 David J. Bradshaw - dave@bradshaw.net
+*  License: MIT
+*/
 //# sourceMappingURL=index.js.map
