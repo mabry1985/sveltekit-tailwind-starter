@@ -1,4 +1,5 @@
 <script>
+  import logo from '$lib/assets/oddball-logo.svg';
 
 </script>
 
@@ -6,16 +7,15 @@
   <div class="wrapper">
     <div>
       <a href="/">
-        <!-- <img src="/images/oddball-logo.svg" alt="Oddball Logo" /> -->
-        <h1>Oddball</h1>
+        <img class='oddball-logo' src="{logo}" alt="Oddball Logo" />
       </a>
     </div>
-    <div class="flex flex-row">
+    <div >
       <nav >
-        <ul >
-          <li><a href="/artists" aria-label="Artists information">Artists</a></li>
-          <li><a href="/about" aria-label="Information about the shop">About</a></li>
-          <li><a href="https://shop.oddballstudios.com/" target="_blank" referrerpolicy="no-referrer" aria-label="visit the merchandise store">Shop</a></li>
+        <ul class="nav-ul flex flex-row my-2">
+          <li class="nav-link text-center mr-4"><a href="/artists" aria-label="Artists information">Artists</a></li>
+          <li class="nav-link text-center"><a href="/about" aria-label="Information about the shop">About</a></li>
+          <li class="nav-link text-center ml-4"><a href="https://shop.oddballstudios.com/" target="_blank" referrerpolicy="no-referrer" aria-label="visit the merchandise store">Shop</a></li>
         </ul>
       </nav>
     </div>
@@ -24,10 +24,14 @@
 
 <style>
   .wrapper {
-  padding: 15px 20px;
+  @apply py-3;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.oddball-logo {
+  @apply max-w-[10rem] my-4;
 }
 
 h1 {
@@ -37,6 +41,19 @@ h1 {
   margin: 6px 0 6px 10px;
   display: inline-block;
   vertical-align: top;
+}
+
+.wrapper {
+    @apply flex flex-col;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+.nav-link {
+  @apply text-oddball-white text-lg;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 </style>

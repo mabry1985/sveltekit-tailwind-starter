@@ -3,8 +3,8 @@
 	import Header from "$lib/Header.svelte";
 </script>
 
-<!-- <Heading /> -->
-<div class="container">
+<div class="">
+  
   <Header />
   <slot />
 </div>
